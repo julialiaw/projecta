@@ -1,14 +1,18 @@
 * {
-    box-sizing:border-box
+    box-sizing: border-box;
 }
+
 body {
     padding-top: 100px;
 }
 
 .countdown {
+    margin: 100px auto;
+    width: 50%;
     display: flex;
     gap: 30px;
     font-family: sans-serif;
+    color: #eee;
 }
 
 .time-section {
@@ -17,7 +21,7 @@ body {
 }
 
 .time-group {
-    display:flex;
+    display: flex;
     gap: 10px;
 }
 
@@ -74,22 +78,24 @@ body {
     line-height: 1.5;
     color: #eee;
     background-color: #111;
+    transform-origin: bottom;
 }
 
 .segment-display_bottom {
     bottom: 0;
     line-height: 0;
-    color: #333;
+    color: #eee;
     background-color: #333;
     border-top: 2px solid black;
+    transform-origin: top;
 }
 
-.segment-overlay.flip .segment-overlap_top {
-    animation: flip-top 0.5s ease-in-out forwards;
+.segment-overlay.flip .segment-overlay_top {
+    animation: flip-top 0.8s linear;
 }
 
-.segment-overlay.flip .segment-overlap_bottom {
-    animation: flip-bottom 0.5s ease-in-out forwards;
+.segment-overlay.flip .segment-overlay_bottom {
+    animation: flip-bottom 0.8s linear;
 }
 
 @keyframes flip-top {
